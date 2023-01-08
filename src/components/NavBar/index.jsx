@@ -1,26 +1,44 @@
 import React from "react";
 import CartWidget from "../CartWidget";
-import Logo from './assets/LogoJAC.png'
 import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js'
+import './styles.css'
+import { Link } from "react-router-dom";
 
 export default function NavBar(){
     return(
         <nav className="navbar navbar-expand-lg bg-light">
+
             <div className="container-fluid">
-                <a href="#"><img src={Logo} alt="JAC" width="90" height="90"/></a>
-                <div className="collapse navbar-collapse" id="navbarNav">
+
+                <Link to="/"><img src='Assets/LogoJAC.png' alt="JAC" width="90" height="90"/></Link>
+
+                <div className="divNavBar collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">Home</a>
+                            <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">About JAC</a>
+                            <Link className="nav-link" to="/category/AboutJAC">About JAC</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Pricing</a>
+                            <Link className="nav-link" to="/category/pricing">Pricing</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Promos</a>
+                            <Link className="nav-link" to="/category/promos">Promos</Link>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <Link className="nav-link dropdown-toggle" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Groups
+                            </Link>
+                            <ul class="dropdown-menu">
+                                <li><Link className="dropdown-item" to="/category/Everybody">Everybody</Link></li>
+                                <li><Link className="dropdown-item" to="/category/Professors">Professors</Link></li>
+                                <li><Link className="dropdown-item" to="/category/Cangrejos">Cangrejos</Link></li>
+                                <li><Link className="dropdown-item" to="/category/Pulpos">Pulpos</Link></li>
+                                <li><Link className="dropdown-item" to="/category/Tortugas">Tortugas</Link></li>
+                                <li><Link className="dropdown-item" to="/category/Patos">Patos</Link></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>

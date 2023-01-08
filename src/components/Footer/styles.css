@@ -1,0 +1,30 @@
+footer{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+.logo img{
+    height: 85px;
+    width: 85px;
+}
+
+/* div info */
+.info, .socialMedias{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info div, .socialMedias div{
+    padding: 15px;
+    color: #000000;
+}
+.socialMedias div svg{
+    color: #000000;
+    transition: scale 0.25s;
+}
+.socialMedias div svg:hover{
+    scale: 1.1;
+}
