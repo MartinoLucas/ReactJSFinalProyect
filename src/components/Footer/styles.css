@@ -2,7 +2,11 @@ footer{
     display: block;
     justify-content: center;
     align-items: center;
-    background-color: #f8f9fa;
+    background-color: #E7770A;
+    -webkit-box-shadow: -10px 25px 28px 75px rgba(231, 119, 10, .84);
+    -moz-box-shadow: -10px 25px 28px 75px rgba(231, 119, 10, .84);
+    box-shadow: -10px 25px 28px 75px rgba(231, 119, 10, .84);
+    z-index: 0;
 }
 
 .logo img{

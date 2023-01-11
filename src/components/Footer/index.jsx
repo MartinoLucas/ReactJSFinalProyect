@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer>
         <div className='info'>
-            <div className='logo'><img src='assets/LogoJAC.png' alt="logo" /></div>
+            <div className='logo'><img src='../Assets/JACCalidad-02.png' alt="logo" /></div>
             <div className='name'>Colonia de Vacaciones JAC©</div>
             <div className='adress'>Junin, Buenos Aires, Argentina.</div>
         </div>

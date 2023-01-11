@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import './styles.css'
 import itemsJson from '../../data/items.json'
 import ItemList from '../../components/ItemList'
+import './styles.css'
 
 const ItemListContainer = () => {
 

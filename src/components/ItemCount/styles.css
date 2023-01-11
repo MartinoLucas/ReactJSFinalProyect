@@ -1,0 +1,24 @@
+.bgDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(231, 119, 10, .45), rgba(237, 138, 28, .45), rgba(242, 155, 44, .45), rgba(247, 173, 60, .45), rgba(252, 190, 77, .45));
+    border-radius: 15px;
+    width: 300px;
+}
+.button{
+    background-color: rgba(231, 119, 10, .45);
+    width: 45px;
+    height: 45px;
+}
+span{
+    font-size: 25px;
+}
+.grDiv{
+    display: flex;
+    align-items: center ;
+}
+.buttonContinue{
+    background-image: linear-gradient(to bottom, rgba(231, 119, 10, .45), rgba(237, 138, 28, .45), rgba(242, 155, 44, .45), rgba(247, 173, 60, .45), rgba(252, 190, 77, .45));
+    height: 45px;
+}

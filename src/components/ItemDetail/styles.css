@@ -1,0 +1,19 @@
+.container{
+    margin: 30px;
+    display: flex;
+}
+.container img{
+    max-width: 800px;
+}
+.textContainer{
+    width: 1200px;
+    font-size: 35px;
+    margin: 25px;
+}
+.textContainer h2{
+    font-size: 60px;
+}
+.addSettlers{
+    margin: 30px;
+    display: block;
+}

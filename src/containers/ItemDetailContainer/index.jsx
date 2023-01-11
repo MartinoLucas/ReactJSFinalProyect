@@ -38,7 +38,9 @@ function ItemDetailContainer() {
   }, [id]);
 
   return (
-    <ItemDetail item={item}/>
+    <>
+      <ItemDetail item={item}/>
+    </>
   )
 }
 
