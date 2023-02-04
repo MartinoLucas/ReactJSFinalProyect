@@ -1,45 +1,48 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemDetail from '../../components/ItemDetail'
-import itemsJson from '../../data/items.json'
+import { doc, getDoc } from "firebase/firestore";
+import { db } from '../../firebase/config';
 
 function ItemDetailContainer() {
 
   //Setear el estado
   const [item, setItem] = useState({})
+  const [err, setErr] = useState("")
 
   //Capturar categoria a filtrar
   const {id} = useParams()
 
-  console.log(id);
-
   //se ejecuta al montar los items
   useEffect(() => {
 
-    //Traer los items
-    const getItme = () => {
-      const obtenerItem = new Promise((res, rej) => {
-        setTimeout(() => {
-          res(itemsJson)
-        }, 3000)
-      });
+    const getPosts = async () => {
+      const docRef = doc(db, "posts", id);
+      const docSnap = await getDoc(docRef);
 
-      obtenerItem.then( response => {
-        if(id){
-          const itemById = response.find(item => item.id.toString() === id)
-          console.log(itemById);
-          setItem(itemById)
-        } 
-      })
-      .catch(error => console.log(error))
+      if (docSnap.exists()) {
+        console.log("Document data:", docSnap.data());
+        const postDetail = {
+          id: docSnap.id,
+          ...docSnap.data()
+        }
+        setItem(postDetail)
+      } else {
+        setErr("Such document does not exist.")
+      };
     };
 
-    getItme();
+    getPosts();
+
   }, [id]);
 
   return (
     <>
-      <ItemDetail item={item}/>
+      {
+        Object.keys(item).length === 0 ?
+        <h3>{err}</h3>
+        : <ItemDetail item={item}/>
+      }
     </>
   )
 }

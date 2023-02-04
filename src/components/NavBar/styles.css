@@ -9,7 +9,6 @@ ul li{
     -webkit-box-shadow: 0px 25px 28px -10px rgba(249, 200, 3, .84);
     -moz-box-shadow: 0px 25px 28px -10px rgba(249, 200, 3, .84);
     box-shadow: 0px 25px 28px -10px rgba(249, 200, 3, .84);
-    z-index: 0;
 }
 .divNavBar{
     margin-left: 30px;
