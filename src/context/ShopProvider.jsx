@@ -4,29 +4,18 @@ export const Shop = createContext();
 
 const ShopProvider = ({children}) => {
 
+  //Set settlers empty array
   const [settlers, setSettlers] = useState([])
 
+  //Set quantity
   const [quantity, setQuatity] = useState(0)
 
+  //Function addSettlers
   const addSettlers = (settler) => {
     setSettlers([...settlers, settler])
   }
 
-  const generateSettlerObject = ({
-    name = "",
-    lastName = "",
-    age = 0
-  }) => {
-    return {
-        settler: {
-            name: name,
-            lastName: lastName,
-            age: age,
-        },
-        registredAt: new Date().toLocaleString()
-    }
-  }
-
+  //Function set quantity in cart
   const countCart = () => {
     let cantidadTotal = 0;
     for (const settler of settlers) {
@@ -35,8 +24,14 @@ const ShopProvider = ({children}) => {
     return cantidadTotal
   }
 
+  //Function clearCart
+  const cleanCart = () => {
+    setSettlers([])
+    setQuatity(0)
+  }
+
   return (
-    <Shop.Provider value= {{settlers, addSettlers, generateSettlerObject, countCart, quantity, setQuatity}}>
+    <Shop.Provider value= {{settlers, addSettlers, countCart, quantity, setQuatity, cleanCart}}>
       {children}
     </Shop.Provider>
   )

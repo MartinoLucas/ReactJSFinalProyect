@@ -3,6 +3,12 @@ import { Link } from "react-router-dom";
 import { Shop } from "../../context/ShopProvider";
 import './styles.css'
 
+/**
+ * 
+ * @param {countCart number} CartWidget Render de number of settlers added
+ * @returns CartWidget
+ */
+
 export default function CartWidget(){
 
     //Print cant.
@@ -16,4 +22,4 @@ export default function CartWidget(){
             <span>{countCart()}</span>
         </>
     );
-}; //50.00mins
+};

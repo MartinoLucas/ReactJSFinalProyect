@@ -1,4 +1,4 @@
-import React, { useContext} from 'react'
+import React, { useContext } from 'react'
 import ItemCount from '../../components/ItemCount'
 import 'bootstrap/dist/css/bootstrap.css'
 import './styles.css'
@@ -8,19 +8,14 @@ import ItemDetailInfo from '../ItemDetailInfo'
 
 function ItemDetail({item}) {
 
-  // const [sett, setSett] = useState({})
-
+  //Traer de ShopProvidr
   const {addSettlers, settlers, setQuatity, quantity} = useContext(Shop)
 
+  //Function para agregar settlers
   const onAdd = (cantidad) => {
-    console.log(`Se agregaron ${cantidad} settlers`);
     setQuatity(cantidad)
     addSettlers({...settlers, quantity: cantidad})
   }
-
-  // const createSettler = () => {
-
-  // }
 
   return (
     <>
@@ -39,8 +34,8 @@ function ItemDetail({item}) {
           </div>
         </div>
            
-         : <Link to="/cart" className='btn btn-primary p-2 m-3 buttonContinue'>Continue with register</Link>
-      }
+          : <Link to="/cart" className='btn btn-primary p-2 m-3 buttonContinue'>Continue with register</Link>
+       }
     </>
   )
 }

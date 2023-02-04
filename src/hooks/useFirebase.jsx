@@ -29,7 +29,6 @@ const useFirebase = (categoryId) => {
   
         const postsFirebase = [];
         querySnapshot.forEach((doc) => {
-          console.log(`${doc.id} => ${doc.data()}`);
           const post = {
             id: doc.id,
             ...doc.data()

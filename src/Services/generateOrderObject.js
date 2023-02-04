@@ -1,20 +1,16 @@
 const generateOrderObject = ({
     name = "",
     lastName = "",
-    age = 0,
     email = "",
-    cart = [],
-    total = 0
+    numSett = 0
 }) => {
     return {
-        buyer: {
+        newSettlerResposible: {
             name: name,
             lastName: lastName,
-            age: age,
-            email: email
+            email: email,
         },
-        items: cart,
-        total:total,
+        numberOfSettlers: numSett,
         createdAt: new Date().toLocaleString()
     }
 }

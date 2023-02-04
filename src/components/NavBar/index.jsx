@@ -18,15 +18,6 @@ export default function NavBar(){
                         <li className="nav-item">
                             <Link className="nav-link active option" aria-current="page" to="/">Home</Link>
                         </li>
-                        <li className="nav-item option">
-                            <Link className="nav-link" to="/category/AboutJAC">About JAC</Link>
-                        </li>
-                        <li className="nav-item option">
-                            <Link className="nav-link" to="/category/pricing">Pricing</Link>
-                        </li>
-                        <li className="nav-item option">
-                            <Link className="nav-link" to="/category/promos">Promos</Link>
-                        </li>
                         <li className="nav-item dropdown option">
                             <Link className="nav-link dropdown-toggle" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Groups

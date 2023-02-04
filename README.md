@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+#JAC Colonia de Vacaciones Landing Page & Registration
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##El fin de esta pagina creada para JAC Colonia de Vacaciones es el de reducir los tiempos de inscripcion y, a su vez, subir mayor cantidad de informacion en un lugar centralizado y 100% personalizado.
 
-## Available Scripts
+###En la Home de la App se puede apreciar un conjunto de cards.
+...Estas mismas son el resumen de un evento sucedido en la colonia, en la que se muestra informacion mas detallada y una foto del evento al hacer click.
+...Dentro del detalle de la misma aparece, tambien, la posibilidad de agregar a uno o mas colonos.
+...Esta opcion luego lleva a hacer una inscripcion previa la cual te mete en una cola para continuar el tramite precensialmente, como nos pide el cliente.
 
-In the project directory, you can run:
+###Categorias de las cards.
+...Cada card tiene asignada una categoria dependiendo el grupo que haya realizado dicho evento.
+...Esta asignacion nos permite luego filtrar por grupos las cards.
+...Algunas de las categorias son:
+..*Professors
+..*Cangrejos
+..*Patitos
+..*entre otros
 
-### `npm start`
+###Añadido a la cola
+...Para añadirnos a la cola , la app requiere de informacion que sera enviada al servidor para ser almacenada.
+...Ademas crea una id unica con el fin de asignarla para identificarse en la mesa presencial.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##Modulos agregados, ¿Por que agregan valor?
+..*Bootstrap
+...Agregado con el fin de agilizar la implementacion de estilos y no extemder el tiempo en los estilos y poder dedicarlo al desarrollo de la logica de la APP.
+..*SweetAlert2
+...Agregado con el fin de generar una alerta que no sea molesta para la UX, ya que se entiende que alertas sin estilar y defaults no son agradabes a la vista y son poco practicas y molestas.

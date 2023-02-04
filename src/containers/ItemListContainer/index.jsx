@@ -7,8 +7,10 @@ import './styles.css'
 
 const ItemListContainer = () => {
 
+  //Traer de ShopProvider
   const {categoryId} = useParams()
 
+  //Destructuring de useFirebase
   const [items, loader, error] = useFirebase(categoryId)
 
   return (

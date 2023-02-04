@@ -1,0 +1,15 @@
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+.textForm{
+    margin: 30px;
+}
+
+form{
+    margin-left: 50px;
+}
+form label, form input{
+    padding: 15px;
+}
